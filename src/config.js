@@ -3,7 +3,6 @@ const clientId = process.env.REACT_APP_GITHUB_CLIENT_ID;
 const clientSecret = process.env.REACT_APP_GITHUB_CLIENT_SECRET;
 
 export function getReposApiEndpoint(orgName) {
-  console.log(process.env.REACT_APP_GITHUB_CLIENT_ID);
   return clientId && clientSecret
     ? `${apiBaseUrl}/orgs/${orgName}/repos?per_page=100&client_id=${clientId}&client_secret=${clientSecret}`
     : `${apiBaseUrl}/orgs/${orgName}/repos?per_page=100`;
